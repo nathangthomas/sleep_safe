@@ -1,0 +1,14 @@
+ <h1><%= @shelter.name %></h1>
+<h3>Info</h3>
+ <ul>
+   <li>Phone: <%= @shelter.phone_number%></li>
+   <li>Hours: <%= @shelter.hours%></li>
+   <li>Address: <%= @shelter.address%></li>
+   <li>City: <%= @shelter.city%></li>
+   <li>State: <%= @shelter.state%></li>
+   <li>Zip: <%= @shelter.zip%></li>
+ </ul>
+
+<h3>Special Services</h3>
+
+<%= link_to 'Back', shelters_path %>
