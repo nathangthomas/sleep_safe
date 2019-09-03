@@ -1,0 +1,16 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Shelters</h1>
+<ul>
+
+</ul>
+    <% @shelters.each do |shelter| %>
+        <li>Shelter Name: <%=link_to "#{shelter.name}", shelter %></li>
+        <li>Phone: <%= shelter.phone_number %></li>
+
+        <br>
+<% end %>
+
+</div>

@@ -1,0 +1,19 @@
+body
+.jumbotron {
+background-image: url("jumbotron_bg.jpg");
+ background-image  width: 1200px;
+  height: 200px;
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.jumbotron h1 {
+
+color: #FFFFFF;
+font-size: 48px;
+
+font-family: 'Shift', sans-serif;
+font-weight: bold;
+
+}
