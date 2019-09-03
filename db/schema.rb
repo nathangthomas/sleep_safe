@@ -16,6 +16,14 @@ ActiveRecord::Schema.define(version: 2019_09_03_085247) do
   enable_extension "plpgsql"
 
   create_table "shelters", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "hours"
+    t.bigint "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

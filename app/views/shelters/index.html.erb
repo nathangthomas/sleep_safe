@@ -12,7 +12,8 @@
   <tbody>
     <% @shelters.each do |shelter| %>
       <tr>
-        <td><%= link_to 'Show', shelter %></td>
+        <td><%=link_to "#{shelter.name}", shelter %></td>
+        <td><%= link_to "#{shelter.phone_number}", shelter %></td>
         <td><%= link_to 'Edit', edit_shelter_path(shelter) %></td>
         <td><%= link_to 'Destroy', shelter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
