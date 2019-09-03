@@ -8,12 +8,31 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-<header>
-  <!-- THIS IS NECESSARY FOR DEVISE -->
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
-</header>
+  <header>
+    <nav class="navbar navbar-default navbar-fluid">
+
+         <ul class="nav nav-pills">
+         <li><a class="navbar-brand" href="#">SleepSafe</a></li>
+         <% if current_user != nil %>
+
+         <li><%=link_to "Logout",destroy_user_session_path,  method: :delete%></li>
+         <li><%=link_to "Dashboard", dashboard_path%></li>
+
+         <% else %>
+         <li><%=link_to "Sign Up",new_user_registration_path%>></li>
+         <li><%=link_to "Log In",new_user_session_path%>></li>
+
+         <% end  %>
+
+         <!-- <li><form class="form-inline">
+       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></li> -->
+       </ul>
+     </nav>
+  </header>
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
