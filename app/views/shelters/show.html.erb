@@ -1,14 +1,48 @@
- <h1><%= @shelter.name %></h1>
-<h3>Info</h3>
- <ul>
-   <li>Phone: <%= @shelter.phone_number%></li>
-   <li>Hours: <%= @shelter.hours%></li>
-   <li>Address: <%= @shelter.address%></li>
-   <li>City: <%= @shelter.city%></li>
-   <li>State: <%= @shelter.state%></li>
-   <li>Zip: <%= @shelter.zip%></li>
- </ul>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;  /* The height is 400 pixels */
+      width: 100%;  /* The width is the width of the web page */
+    }
+  </style>
+</head>
+<body>
+  <h1><%= @shelter.name %></h1>
+  <h3>Info</h3>
+   <ul>
+     <li>Phone: <%= @shelter.phone_number%></li>
+     <li>Hours: <%= @shelter.hours%></li>
+     <li>Address: <%= @shelter.address%></li>
+     <li>City: <%= @shelter.city%></li>
+     <li>State: <%= @shelter.state%></li>
+     <li>Zip: <%= @shelter.zip%></li>
+   </ul>
 
-<h3>Special Services</h3>
+  <h3>Special Services</h3>
 
-<%= link_to 'Back', shelters_path %>
+  <h3>Dever Map</h3>
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <script>
+// Initialize and add the map
+  function initMap() {
+  // The location of coordinates
+  var shelter_location = {lat: 39.73915, lng: -104.9847};
+  // The map, centered at coordinates
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: shelter_location});
+  // The marker, positioned at coordinates
+  var marker = new google.maps.Marker({position: shelter_location, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+    <%= link_to 'Back', shelters_path %>
+    
+  </body>
+</html>
