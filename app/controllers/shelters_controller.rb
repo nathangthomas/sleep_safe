@@ -1,6 +1,5 @@
 class SheltersController < ApplicationController
   before_action :set_shelter, only: [:show, :edit, :update, :destroy]
-
   # GET /shelters
   # GET /shelters.json
   def index
@@ -10,6 +9,8 @@ class SheltersController < ApplicationController
   # GET /shelters/1
   # GET /shelters/1.json
   def show
+    binding.pry
+    @shelter = Shelter.find(params[:id])
   end
 
   # GET /shelters/new
