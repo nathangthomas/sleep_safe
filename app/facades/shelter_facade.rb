@@ -29,7 +29,3 @@ class ShelterFacade
     end
   end
 end
-
-# detaild_response = shelter_place_ids.each do
-#
-# https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyD9NRZPwYQMZ29CnTZB9LgOj14fnwJ-ASc&placeid=ChIJ6zlkGd94bIcR6dgyevG_u0c&fields=name,formatted_address,formatted_phone_number,opening_hours
