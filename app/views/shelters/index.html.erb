@@ -4,25 +4,12 @@
 
 <h1>Shelters</h1>
 
+  <% facade.shelters.each do |shelter| %>
+      <li>Shelter Name: <%=link_to "#{shelter.name}", shelter %></li>
+      <li>Phone: <%= shelter.phone_number %></li>
 
-    <% @shelters.each do |shelter| %>
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">  <img src= <%= "#{shelter.image}" %> class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"> <%= shelter.name %></h5>
-    <ul class="card-text">
-      <li> <%= shelter.phone_number %></li>
-    </ul>
-
-    Phone: <%= shelter.phone_number %>
-  <%= button_to "View Shelter", shelter_path(shelter), method: :get%>
-  </div>
-
-  </div>
-  </div>
-</div>
-<% end %>
+      <br>
+  <% end %>
 
 </div>
 

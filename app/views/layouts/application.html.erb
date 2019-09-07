@@ -16,6 +16,17 @@
   <header>
     <nav class="navbar navbar-default navbar-fluid">
 
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <%= form_tag :search, method: :get, class: "form-inline" do %>
+            <div class="form-group search-field">
+              <%= text_field_tag :q, "Search by zipcode", class: "form-control" %>
+              <%= submit_tag "Search",  class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+
          <ul class="nav nav-pills">
          <li><a class="navbar-brand" href="#">SleepSafe</a></li>
          <% if current_user != nil %>

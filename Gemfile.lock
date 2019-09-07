@@ -45,6 +45,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
+    attr_encrypted (3.1.0)
+      encryptor (~> 3.0.0)
     authy (2.7.5)
       httpclient (>= 2.5.3.3)
     autoprefixer-rails (9.6.1.1)
@@ -87,8 +89,15 @@ GEM
     devise-authy (1.11.1)
       authy (>= 2.7.5)
       devise (>= 3.0.0)
+    devise-two-factor (3.1.0)
+      activesupport (< 6.1)
+      attr_encrypted (>= 1.3, < 4, != 2)
+      devise (~> 4.0)
+      railties (< 6.1)
+      rotp (~> 2.0)
     diff-lcs (1.3)
     docile (1.3.2)
+    encryptor (3.0.0)
     erubi (1.8.0)
     execjs (2.7.0)
     factory_bot (5.0.2)
@@ -197,6 +206,7 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rotp (2.1.2)
     rspec-core (3.8.2)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.4)
@@ -279,6 +289,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-authy
+  devise-two-factor
   factory_bot_rails
   faker
   faraday
