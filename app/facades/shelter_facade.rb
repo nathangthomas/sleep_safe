@@ -1,11 +1,25 @@
 class ShelterFacade
 
+  def coordinates
+    conn = Faraday.new(url: "https://maps.googleapis.com") do |faraday|
+      faraday.params["key"] = ENV["GOOGLE_PLACES_API_KEY"]
+      faraday.params["components"] = "postal_code:80203"
+      faraday.adapter Faraday.default_adapter
+    end
+
+    response = conn.get("https://maps.googleapis.com/maps/api/geocode/json?")
+
+    data = JSON.parse(response.body, symbolize_names: true)
+    data[:results][0][:geometry][:location].values.join(",")
+  end
+
+
   def shelter_place_ids
     conn = Faraday.new(url: "https://maps.googleapis.com") do |faraday|
       faraday.params["key"] = ENV["GOOGLE_PLACES_API_KEY"]
       faraday.params["radius"] = 3218
       faraday.params["keyword"] = "homeless shelter"
-      faraday.params["location"] = "39.7541,-105.0002"
+      faraday.params["location"] = coordinates
       faraday.adapter Faraday.default_adapter
     end
 
