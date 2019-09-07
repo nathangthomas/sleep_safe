@@ -17,7 +17,7 @@
         <ul class="nav navbar-nav">
           <%= form_tag :search, method: :get, class: "form-inline" do %>
             <div class="form-group search-field">
-              <%= text_field_tag :search, "Search by zipcode", class: "form-control" %>
+              <%= text_field_tag :q, "Search by zipcode", class: "form-control" %>
               <%= submit_tag "Search",  class: "btn btn-primary" %>
             </div>
           <% end %>
