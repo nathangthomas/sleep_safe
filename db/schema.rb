@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_03_085247) do
+ActiveRecord::Schema.define(version: 2019_09_07_170218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,14 +38,21 @@ ActiveRecord::Schema.define(version: 2019_09_03_085247) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.integer "phone_number"
+    t.string "phone_number"
+    t.bigint "country_code"
     t.boolean "opt_in", default: true
+    t.boolean "enbaled_two_factor"
+    t.boolean "unconfirmed_two_factor"
     t.string "provider"
     t.string "uid"
     t.string "token"
     t.integer "expires_at"
     t.boolean "expires"
     t.string "refresh_token"
+    t.string "authy_id"
+    t.datetime "last_sign_in_with_authy"
+    t.boolean "authy_enabled", default: false
+    t.index ["authy_id"], name: "index_users_on_authy_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

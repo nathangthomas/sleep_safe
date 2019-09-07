@@ -3,14 +3,41 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Shelters</h1>
-<ul>
 
-</ul>
+
     <% @shelters.each do |shelter| %>
-        <li>Shelter Name: <%=link_to "#{shelter.name}", shelter %></li>
-        <li>Phone: <%= shelter.phone_number %></li>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">  <img src= <%= "#{shelter.image}" %> class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> <%= shelter.name %></h5>
+    <ul class="card-text">
+      <li> <%= shelter.phone_number %></li>
+    </ul>
 
-        <br>
+    Phone: <%= shelter.phone_number %>
+  <%= button_to "View Shelter", shelter_path(shelter), method: :get%>
+  </div>
+
+  </div>
+  </div>
+</div>
 <% end %>
 
+</div>
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src= <%= "shelter.image" %>"" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
 </div>
