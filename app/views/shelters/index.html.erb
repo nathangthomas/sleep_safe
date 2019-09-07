@@ -6,11 +6,11 @@
 <ul>
 
 </ul>
-    <% @shelters.each do |shelter| %>
-        <li>Shelter Name: <%=link_to "#{shelter.name}", shelter %></li>
-        <li>Phone: <%= shelter.phone_number %></li>
+  <% facade.shelters.each do |shelter| %>
+      <li>Shelter Name: <%=link_to "#{shelter.name}", shelter %></li>
+      <li>Phone: <%= shelter.phone_number %></li>
 
-        <br>
-<% end %>
+      <br>
+  <% end %>
 
 </div>
