@@ -1,14 +1,17 @@
 class ShelterFacade
 
+  def initialize(zip_code)
+    @zip_code = zip_code
+  end
+
   def coordinates
     conn = Faraday.new(url: "https://maps.googleapis.com") do |faraday|
       faraday.params["key"] = ENV["GOOGLE_PLACES_API_KEY"]
-      faraday.params["components"] = "postal_code:80203"
+      faraday.params["components"] = "postal_code:#{@zip_code}"
       faraday.adapter Faraday.default_adapter
     end
 
     response = conn.get("https://maps.googleapis.com/maps/api/geocode/json?")
-
     data = JSON.parse(response.body, symbolize_names: true)
     data[:results][0][:geometry][:location].values.join(",")
   end
