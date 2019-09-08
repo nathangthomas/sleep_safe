@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 2019_09_07_170218) do
     t.string "phone_number"
     t.bigint "country_code"
     t.boolean "opt_in", default: true
-    t.boolean "enbaled_two_factor"
-    t.boolean "unconfirmed_two_factor"
     t.string "provider"
     t.string "uid"
     t.string "token"

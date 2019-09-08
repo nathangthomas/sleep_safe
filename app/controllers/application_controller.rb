@@ -1,5 +1,15 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :ensure_authy_enabled
+
+    private
+
+    def ensure_authy_enabled
+      return if params[:controller] == "devise/devise_authy"
+      if current_user and !current_user.authy_enabled?
+        redirect_to user_token
+      end
+    end
 
   protected
 

@@ -9,10 +9,4 @@ class DeviseAuthyAddToUsers < ActiveRecord::Migration[5.2]
     add_index :users, :authy_id
   end
 
-  def self.down
-    change_table :users do |t|
-      t.remove :authy_id, :last_sign_in_with_authy, :authy_enabled
-    end
-  end
 end
-
