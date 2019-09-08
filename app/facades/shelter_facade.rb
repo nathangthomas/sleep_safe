@@ -1,7 +1,9 @@
 class ShelterFacade
 
-  def initialize(zip_code)
+  def initialize(zip_code=nil)
     @zip_code = zip_code
+    conncect = TwilioService.new
+    @twilio = connect.exporting_data[:q]
   end
 
   def coordinates
