@@ -8,6 +8,5 @@ class Shelter
     @hours = attr[:opening_hours]
     @lat = attr[:geometry][:location][:lat]
     @lng = attr[:geometry][:location][:lng]
-
   end
 end
