@@ -30,6 +30,11 @@ body {
   background-size: cover;
 }
 
+main {
+  min-height: 76vh;
+  max-height: max-content;
+}
+
 h1,
 h2,
 h3,
@@ -277,11 +282,11 @@ p {
 }
 
 .footer {
- margin-top: 280px;
+ margin-top: -80px;
 }
 
 .intro-text{
-  margin-left: 280px;
+  margin-left: 450px;
 }
 
 /*
