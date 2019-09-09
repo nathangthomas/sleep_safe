@@ -5,6 +5,11 @@ class ShelterFacade
     @radius = params[:radius].to_i * 1609.34
   end
 
+  def shelters
+    service = GoogleMapsService.new
+    service.shelters_by_zip_code(zip_code, radius)
+  end
+
   def coordinates
     conn = Faraday.new(url: "https://maps.googleapis.com") do |faraday|
       faraday.params["key"] = ENV["GOOGLE_PLACES_API_KEY"]
@@ -46,4 +51,7 @@ class ShelterFacade
       Shelter.new(detailed_shelter_data[:result])
     end
   end
+
+  private
+  attr_reader :zip_code, :radius
 end
