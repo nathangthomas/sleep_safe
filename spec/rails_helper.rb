@@ -61,3 +61,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+def stub_google_maps_api_calls
+  coordinates = File.open("./fixtures/coordinates.json")
+  stub_request(:get, "https://maps.googleapis.com/maps/api/geocode").to_return(status:200, body:coordinates)
+  shelter_place_ids = File.open("./fixtures/shelter_place_ids.json")
+  stub_request(:get, "https://maps.googleapis.com/maps/api/place/nearbysearch/json?").to_return(status:200, body:shelter_place_ids)
+  shelters = File.open("./fixtures/shelters.json")
+  stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json?").to_return(status:200, body:shelters)
+end

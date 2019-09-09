@@ -44,6 +44,7 @@ class ShelterFacade
       detailed_response = conn.get("https://maps.googleapis.com/maps/api/place/details/json?")
       detailed_shelter_data = JSON.parse(detailed_response.body, symbolize_names: true)
       Shelter.new(detailed_shelter_data[:result])
+    
     end
   end
 end

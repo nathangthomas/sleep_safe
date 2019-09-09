@@ -4,6 +4,9 @@ describe 'User can see list of shelters' do
   describe 'when I search for shelters by zipcode then I am taken to shelters/index where I see all shelters' do
     it 'I see the name, address, and the hours of opperation' do
 
+      # stub_google_maps_api_calls
+      # WebMock.allow_net_connect!
+
       visit root_path
       within('.navbar') do
         fill_in :q, with: '80202'
