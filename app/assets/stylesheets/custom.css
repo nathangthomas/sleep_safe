@@ -289,6 +289,24 @@ p {
   margin-left: 450px;
 }
 
+.shelters{
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 125px;
+}
+
+.shelter{
+  color: white;
+ }
+
+ /* .site-heading-lower-lower{
+   padding-top: 10px;
+ } */
+
+.index_title{
+  color: sandybrown;
+  text-align: center;
+}
 /*
 .navbar-collapse {
   margin-right: 0px;
