@@ -28,7 +28,6 @@ describe 'User can see list of shelters' do
       expect(current_path).to eq(search_path)
 
       # expect(page).to have_css(".shelter", count:10)
-
       within(first('.shelter')) do
         expect(page).to have_css(".name")
         # expect(page).to have_css(".hours_of_operation")

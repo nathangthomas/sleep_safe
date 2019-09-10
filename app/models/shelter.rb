@@ -8,6 +8,7 @@ after_validation :geocode, :if => :address_changed?
 
   def shelters_by_zip
     
+
   end
 
 end

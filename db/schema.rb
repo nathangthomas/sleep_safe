@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_10_020628) do
     t.string "state"
     t.string "zip"
     t.string "hours"
-    t.string "phone_number"
+    t.bigint "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2019_09_10_020628) do
     t.string "first_name"
     t.string "last_name"
     t.string "phone_number"
-    t.bigint "country_code"
     t.boolean "opt_in", default: true
     t.string "provider"
     t.string "uid"
@@ -49,10 +48,9 @@ ActiveRecord::Schema.define(version: 2019_09_10_020628) do
     t.integer "expires_at"
     t.boolean "expires"
     t.string "refresh_token"
+    t.integer "country_code", default: 1
     t.string "authy_id"
-    t.datetime "last_sign_in_with_authy"
-    t.boolean "authy_enabled", default: false
-    t.index ["authy_id"], name: "index_users_on_authy_id"
+    t.boolean "verified", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
