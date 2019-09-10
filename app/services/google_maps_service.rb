@@ -5,7 +5,6 @@ class GoogleMapsService
     @radius = radius
   end
 
-
   def coordinates
     conn = Faraday.new(url: "https://maps.googleapis.com") do |faraday|
       faraday.params["key"] = ENV["GOOGLE_PLACES_API_KEY"]
