@@ -8,7 +8,9 @@ require 'faker'
     address: Faker::Address.street_name,
     city: Faker::Address.city,
     state: Faker::Address.state,
-    zip: Faker::Address.zip,
+    zip: '80501',
+    latitude: 40.1733,
+    longitude: -105.1142,
     phone_number: '3031231234'
   )
 end

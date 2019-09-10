@@ -1,21 +1,28 @@
 class SheltersController < ApplicationController
-  before_action :set_shelter, only: [:show, :edit, :update, :destroy]
-
+  # before_action :set_shelter, only: [:show, :edit, :update, :destroy]
   # GET /shelters
   # GET /shelters.json
+  # def index
+  #   @shelters = Shelter.all
+  # end
+
+  # GET /shelters/1
+  # GET /shelters/1.json
+
   def index
     @shelters = Shelter.all
   end
 
-  # GET /shelters/1
-  # GET /shelters/1.json
   def show
+    render locals: {
+    facade: ShelterFacade.new(params[:id])
+    }
   end
 
-  # GET /shelters/new
-  def new
-    @shelter = Shelter.new
-  end
+  # # GET /shelters/new
+  # def new
+  #   @shelter = Shelter.new
+  # end
 
   # GET /shelters/1/edit
   def edit
@@ -63,9 +70,9 @@ class SheltersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_shelter
-      @shelter = Shelter.find(params[:id])
-    end
+    # def set_shelter
+    #   @shelter = Shelter.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shelter_params

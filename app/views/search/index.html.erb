@@ -9,8 +9,8 @@
   <% @shelters.each do |shelter| %>
   <div class = 'shelter'>
     <h3 class='name'> <%= link_to shelter[:name], shelter_path(shelter) %></h3>
-    <p class='phone_number'> Phone: <%= shelter[:phone_number] %></p>
-    <p class='address'> <%= shelter[:address] + " " + shelter[:zip] %></p>
+    <p class='phone_number'> Phone: <%= shelter[:phone_number]%></p>
+    <p class='address'> <%= shelter[:address] %></p>
   </div>
 
   <% end %>
