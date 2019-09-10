@@ -7,9 +7,9 @@ class ShelterFacade
 
   def shelters
     service = GoogleMapsService.new(zip_code, radius)
-    service.shelters_by_zip_code
+    @shelters ||= service.shelters_by_zip_code
   end
-  
+
   private
   attr_reader :zip_code, :radius
 end
