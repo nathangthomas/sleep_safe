@@ -26,6 +26,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# gem 'libxml-ruby'
+# Use Authy for sending token
+gem 'authy'
+
+# Use Twilio to send confirmation message
+gem 'twilio-ruby'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
