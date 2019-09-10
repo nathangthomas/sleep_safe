@@ -1,0 +1,12 @@
+<%= form_tag users_verify_path do %>
+  <div class="form-group">
+    <%= label_tag :code, "Verification Code:" %>
+    <%= text_field_tag :token, '', class: "form-control" %>
+  </div>
+  <button type="submit" class="btn btn-primary">Verify Token</button>
+<% end -%>
+
+<hr>
+<%= form_tag users_resend_path do %>
+  <button type="submit" class="btn">Resend code</button>
+<% end -%>
