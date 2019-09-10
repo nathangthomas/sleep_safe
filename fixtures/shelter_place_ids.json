@@ -1,0 +1,43 @@
+{
+   "html_attributions": [],
+   "results": [
+      {
+         "geometry": {
+            "location": {
+               "lat": 39.7514945,
+               "lng": -104.987716
+            },
+            "viewport": {
+               "northeast": {
+                  "lat": 39.75281042989272,
+                  "lng": -104.9863222701073
+               },
+               "southwest": {
+                  "lat": 39.75011077010728,
+                  "lng": -104.9890219298927
+               }
+            }
+         },
+         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id": "edfede739d1a9dbbe9a3010f04903ca6527f5882",
+         "name": "Colorado Coalition for the Homeless",
+         "opening_hours": {
+            "open_now": false
+         },
+         "place_id": "ChIJNwoB8Nh4bIcRhy3047QC7lM",
+         "plus_code": {
+            "compound_code": "Q226+HW Denver, Colorado",
+            "global_code": "85FQQ226+HW"
+         },
+         "rating": 3.7,
+         "reference": "ChIJNwoB8Nh4bIcRhy3047QC7lM",
+         "scope": "GOOGLE",
+         "types": [
+            "dentist",
+            "health",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total": 17,
+         "vicinity": "2111 Champa St, Denver"
+      }
