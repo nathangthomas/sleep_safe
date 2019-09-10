@@ -308,6 +308,10 @@ p {
   color: sandybrown;
   text-align: center;
 }
+
+.shelter_show{
+  text-align: center;
+}
 /*
 .navbar-collapse {
   margin-right: 0px;

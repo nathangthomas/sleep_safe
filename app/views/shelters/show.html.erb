@@ -4,24 +4,26 @@
   <style>
     /* Set the size of the div element that contains the map */
     #map {
-      height: 400px;  /* The height is 400 pixels */
-      width: 100%;  /* The width is the width of the web page */
+      height: 300px;  /* The height is 400 pixels */
+      width: 75%;  /* The width is the width of the web page */
+     margin:0 auto 0 auto;
+     bottom:-10;
+     position:centered;
     }
+
   </style>
 </head>
 <body>
+
+  <section class='shelter_show'>
   <h1><%= @shelter.name %></h1>
   <h3>Info</h3>
-   <ul>
-     <li>Phone: <%= @shelter.phone_number%></li>
-     <li>Hours: <%= @shelter.hours%></li>
-     <li>Address: <%= @shelter.address%></li>
-     <li>City: <%= @shelter.city%></li>
-     <li>State: <%= @shelter.state%></li>
-     <li>Zip: <%= @shelter.zip%></li>
-   </ul>
+      <h3 class='name'> <%= @shelter[:name]  %></h3>
+      <p class='phone_number'> Phone: <%= @shelter[:phone_number] %></p>
+      <p class='address'> <%= @shelter[:address] %></p>
+      <h3>Special Services</h3>
+  </section>
 
-  <h3>Special Services</h3>
 
   <!--The div element for the map -->
   <div id="map"></div>
@@ -29,7 +31,7 @@
   // Initialize and add the map
   function initMap() {
   // The location of coordinates
-  var shelter_location = {lat: 39.73915, lng: -104.9847};
+  var shelter_location = {lat: <%= @shelter[:latitude] %>, lng: <%= @shelter[:longitude] %>};
   // The map, centered at coordinates
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 15, center: shelter_location});

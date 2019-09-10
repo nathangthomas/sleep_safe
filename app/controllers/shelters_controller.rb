@@ -14,9 +14,7 @@ class SheltersController < ApplicationController
   end
 
   def show
-    render locals: {
-    facade: ShelterFacade.new(params[:id])
-    }
+    @shelter = Shelter.find(params[:id])
   end
 
   # # GET /shelters/new
