@@ -1,8 +1,10 @@
 class ShelterFacade
 
+
   def initialize(params)
     @zip_code = params[:q]
     @radius = params[:radius].to_i * 1609.34
+
   end
 
   def shelters

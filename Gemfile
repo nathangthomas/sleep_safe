@@ -16,15 +16,26 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'omniauth-google-oauth2'
 gem 'figaro'
+gem "geocoder"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'devise-two-factor'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'devise-authy'
+
 gem 'bootstrap-sass', '~> 3.3.6'
+
+# gem 'libxml-ruby'
+# Use Authy for sending token
+gem 'authy'
+
+# Use Twilio to send confirmation message
+gem 'twilio-ruby'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -41,7 +52,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'figaro'
+gem 'json'
 
+gem 'sidekiq'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
