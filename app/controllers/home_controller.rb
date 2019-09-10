@@ -1,5 +1,4 @@
- class HomeController < ApplicationController
-   def index
-   end
-   
+class HomeController < ApplicationController
+  def index
+  end
 end
