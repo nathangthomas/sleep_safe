@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def verify
-    @user = current_user
+    @user = User.find(session[:user_id])
 
     # Use Authy to send the verification token
     token = Authy::API.verify(id: @user.authy_id, token: params[:token])
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       send_message("You did it! Signup complete :)")
 
       # Show the user profile
-      redirect_to user_path(@user.id)
+      redirect_to dashboard_path
     else
       flash.now[:danger] = "Incorrect code, please try again"
       render :show_verify
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
   end
 
   def resend
-    @user = current_user
+    @user = User.find(session[:user_id])
     Authy::API.request_sms(id: @user.authy_id)
     flash[:notice] = 'Verification code re-sent'
     redirect_to verify_path
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   private
 
   def send_message(message)
-    @user = current_user
+    @user = User.find(session[:user_id])
     twilio_number = ENV['TWILIO_NUMBER']
     account_sid = ENV['TWILIO_ACCOUNT_SID']
     @client = Twilio::REST::Client.new account_sid, ENV['TWILIO_AUTH_TOKEN']
