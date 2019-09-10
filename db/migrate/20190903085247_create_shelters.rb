@@ -8,7 +8,7 @@ class CreateShelters < ActiveRecord::Migration[5.2]
       t.string :state
       t.string :zip
       t.string :hours
-      t.string :phone_number
+      t.bigint :phone_number
       t.timestamps
     end
   end

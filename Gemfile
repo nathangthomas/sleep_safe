@@ -27,7 +27,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'devise-authy'
-gem 'twilio-ruby', '~> 5.26.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
