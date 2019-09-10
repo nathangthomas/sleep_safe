@@ -45,7 +45,17 @@ class ShelterFacade
       end
       detailed_response = conn.get("https://maps.googleapis.com/maps/api/place/details/json?")
       detailed_shelter_data = JSON.parse(detailed_response.body, symbolize_names: true)
-      Shelter.new(detailed_shelter_data[:result])
+
+      name = detailed_shelter_data[:result][:name]
+      address = detailed_shelter_data[:result][:formatted_address]
+      zip = detailed_shelter_data[:result][:formatted_address].split(',')[2].split(' ')[1]
+      phone_number = detailed_shelter_data[:result][:formatted_phone_number]
+      hours = detailed_shelter_data[:result][:opening_hours]
+      lat = detailed_shelter_data[:result][:geometry][:location][:lat]
+      lng = detailed_shelter_data[:result][:geometry][:location][:lng]
+      Shelter.create!(name: name, address: address, phone_number: phone_number, hours: hours, latitude: lat, longitude: lng, zip: zip)
+
+
     end
   end
 end
