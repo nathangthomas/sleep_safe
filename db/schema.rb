@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_09_09_233837) do
-
+ActiveRecord::Schema.define(version: 2019_09_10_020628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_09_233837) do
     t.string "state"
     t.string "zip"
     t.string "hours"
-    t.string "phone_number"
+    t.bigint "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
@@ -42,8 +40,7 @@ ActiveRecord::Schema.define(version: 2019_09_09_233837) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-
-    t.bigint "phone_number"
+    t.string "phone_number"
     t.boolean "opt_in", default: true
     t.string "provider"
     t.string "uid"
