@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :shelters
+  resources :shelters, only: [:index, :show]
   root "home#index"
 
   get '/search', to: "search#index"

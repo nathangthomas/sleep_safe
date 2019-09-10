@@ -1,5 +1,4 @@
-
-{
+  {
    "html_attributions": [],
    "result": {
       "formatted_address": "2111 Champa St, Denver, CO 80205, USA",
@@ -87,4 +86,4 @@
       }
    },
    "status": "OK"
-}
+ }

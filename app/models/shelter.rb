@@ -1,13 +1,13 @@
-class Shelter
-  attr_reader :name, :address, :phone_number, :hours, :lat, :lng
+class Shelter < ApplicationRecord
+attr_reader :name, :address, :phone_number, :zip, :hours, :latitude, :longitude
+geocoded_by :zip
 
-  def initialize(attr = {})
-    @name = attr[:name]
-    @address = attr[:formatted_address]
-    @phone_number = attr[:formatted_phone_number]
-    @hours = attr[:opening_hours]
-    @lat = attr[:geometry][:location][:lat]
-    @lng = attr[:geometry][:location][:lng]
+after_validation :geocode, :if => :address_changed?
 
+
+
+  def shelters_by_zip
+    
   end
+
 end

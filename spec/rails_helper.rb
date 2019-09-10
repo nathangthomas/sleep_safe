@@ -5,6 +5,8 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'webmock/rspec'
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -61,12 +63,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
-
-def stub_google_maps_api_calls
-  coordinates = File.open("./fixtures/coordinates.json")
-  stub_request(:get, "https://maps.googleapis.com/maps/api/geocode").to_return(status:200, body:coordinates)
-  shelter_place_ids = File.open("./fixtures/shelter_place_ids.json")
-  stub_request(:get, "https://maps.googleapis.com/maps/api/place/nearbysearch/json?").to_return(status:200, body:shelter_place_ids)
-  shelters = File.open("./fixtures/shelters.json")
-  stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json?").to_return(status:200, body:shelters)
-end
+#
+# def stub_google_maps_api_calls
+#   coordinates = File.open("./fixtures/coordinates.json")
+#   stub_request(:get, "https://maps.googleapis.com/maps/api/geocode").to_return(status:200, body:coordinates)
+#   shelter_place_ids = File.open("./fixtures/shelter_place_ids.json")
+#   stub_request(:get, "https://maps.googleapis.com/maps/api/place/nearbysearch/json?").to_return(status:200, body:shelter_place_ids)
+#   shelters = File.open("./fixtures/shelters.json")
+#   stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json?").to_return(status:200, body:shelters)
+# end
