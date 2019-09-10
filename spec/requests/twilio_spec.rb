@@ -4,7 +4,7 @@ RSpec.describe "Shelters", type: :request do
   describe "GET /shelters" do
     it "works! (now write some real specs)" do
       json = TwilioService.new
-      twilio = json.export_hash
+      twilio = json.exporting_data
       expect(twilio).to eq(J)
       expect(response).to have_http_status(200)
     end

@@ -16,5 +16,6 @@ class TwilioService
     hashes << hash
   end
   hashes
+  binding.pry
   end
 end

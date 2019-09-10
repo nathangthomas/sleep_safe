@@ -1,9 +1,10 @@
 class ShelterFacade
 
-  def initialize(zip_code=nil)
-    @zip_code = zip_code
-    conncect = TwilioService.new
-    @twilio = connect.exporting_data[:q]
+
+  def initialize(params)
+    @zip_code = params[:q]
+    @radius = params[:radius].to_i * 1609.34
+
   end
 
   def coordinates
@@ -22,7 +23,7 @@ class ShelterFacade
   def shelter_place_ids
     conn = Faraday.new(url: "https://maps.googleapis.com") do |faraday|
       faraday.params["key"] = ENV["GOOGLE_PLACES_API_KEY"]
-      faraday.params["radius"] = 3218
+      faraday.params["radius"] = @radius
       faraday.params["keyword"] = "homeless shelter"
       faraday.params["location"] = coordinates
       faraday.adapter Faraday.default_adapter
