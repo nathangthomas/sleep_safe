@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   post "users/verify"
   post "users/resend"
 
+  # constraints subdomain: "webhooks" do
+  post'/incoming', to: "webhooks#receive"
+  end
+
+
  # Create users
   # resources :users, only: [:new, :create, :show]
 
@@ -26,4 +31,3 @@ Rails.application.routes.draw do
   #   end
   # end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-end
