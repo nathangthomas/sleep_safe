@@ -29,7 +29,7 @@ class GoogleMapsService
       create_shelter(detailed_shelter_data)
     end
   end
-  
+
   def create_shelter(detailed_shelter_data)
     name = detailed_shelter_data[:result][:name]
     address = detailed_shelter_data[:result][:formatted_address]

@@ -17,11 +17,12 @@ describe 'User can see list of shelters' do
     #   to_return(status: 200, body: shelters, headers: {})
 
       #stub_google_maps_api_calls
-       WebMock.allow_net_connect!
+      WebMock.allow_net_connect!
 
       visit root_path
       within('.navbar') do
         fill_in :q, with: '80202'
+        fill_in :radius, with: 10
         click_button 'Search'
       end
 

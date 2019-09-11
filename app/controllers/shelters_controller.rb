@@ -1,33 +1,12 @@
 class SheltersController < ApplicationController
-  # before_action :set_shelter, only: [:show, :edit, :update, :destroy]
-  # GET /shelters
-  # GET /shelters.json
-  # def index
-  #   @shelters = Shelter.all
-  # end
-
-  # GET /shelters/1
-  # GET /shelters/1.json
-
-  def index
-    @shelters = Shelter.all
-  end
 
   def show
     @shelter = Shelter.find(params[:id])
   end
 
-  # # GET /shelters/new
-  # def new
-  #   @shelter = Shelter.new
-  # end
-
-  # GET /shelters/1/edit
   def edit
   end
 
-  # POST /shelters
-  # POST /shelters.json
   def create
     @shelter = Shelter.new(shelter_params)
 
@@ -42,8 +21,6 @@ class SheltersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /shelters/1
-  # PATCH/PUT /shelters/1.json
   def update
     respond_to do |format|
       if @shelter.update(shelter_params)
@@ -56,8 +33,6 @@ class SheltersController < ApplicationController
     end
   end
 
-  # DELETE /shelters/1
-  # DELETE /shelters/1.json
   def destroy
     @shelter.destroy
     respond_to do |format|
@@ -65,15 +40,4 @@ class SheltersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_shelter
-    #   @shelter = Shelter.find(params[:id])
-    # end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def shelter_params
-      params.fetch(:shelter, {})
-    end
-end
+end 
