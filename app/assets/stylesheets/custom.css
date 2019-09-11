@@ -119,7 +119,7 @@ p {
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgba(255, 255, 255, 0.4);
