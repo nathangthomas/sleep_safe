@@ -1,2 +1,11 @@
 language: ruby
 rvm: 2.4.1
+
+services:
+ - postgresql
+
+script:
+ — bundle install
+ — bundle exec rake db:create
+ — bundle exec rake db:migrate
+ — bundle exec rspec
