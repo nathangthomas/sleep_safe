@@ -18,7 +18,7 @@ describe 'As a User without an account' do
        fill_in "Password", with: "123456"
        fill_in "Password confirmation", with: "123456"
        click_button "Sign up"
-       expect(current_path).to eq(root_path)
+       expect(current_path).to eq('/users/verify')
      end
   end
 end
