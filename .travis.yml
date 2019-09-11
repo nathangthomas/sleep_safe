@@ -1,12 +1,15 @@
 language: ruby
 rvm: 2.4.1
 
+
+cache: bundler
+
 services:
- - postgresql
+  - postgresql
 
- cache: bundler
-
-script:
- — bundle exec rake db:create
- — bundle exec rake db:migrate
- — bundle exec rspec
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+# script:
+#  — bundle exec rake db:create
+#  — bundle exec rake db:migrate
+#  — bundle exec rspec
