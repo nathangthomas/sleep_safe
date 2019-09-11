@@ -10,7 +10,7 @@ describe GoogleMapsService do
         shelters = service.shelters_by_zip_code
         expect(shelters).to be_a Array
         expect(shelters.count).to eq(20)
-        # binding.pry
+        binding.pry
         shelter_data = shelters[0]
 
         expect(shelter_data[:name]).to be
