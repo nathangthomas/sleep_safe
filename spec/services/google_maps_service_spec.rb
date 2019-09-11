@@ -10,14 +10,16 @@ describe GoogleMapsService do
         shelters = service.shelters_by_zip_code
         expect(shelters).to be_a Array
         expect(shelters.count).to eq(20)
+        # binding.pry
         shelter_data = shelters[0]
 
         expect(shelter_data[:name]).to be
-        expect(shelter_data[:address]).to be
-        expect(shelter_data[:phone_number]).to be
-        expect(shelter_data[:hours]).to be
-        expect(shelter_data[:latitude]).to be
-        expect(shelter_data[:longitude]).to be
+        expect(shelter_data[:formatted_address]).to be
+        expect(shelter_data[:formatted_phone_number]).to be
+        expect(shelter_data[:opening_hours]).to be
+        expect(shelter_data[:geometry][:location][:lat]).to be
+        expect(shelter_data[:geometry][:location][:lng]).to be
+        expect(shelter_data[:place_id]).to be
       end
     end
   end
