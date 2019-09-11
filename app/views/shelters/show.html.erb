@@ -7,19 +7,20 @@
       width: 75%;
      margin:0 auto 0 auto;
      bottom:-10;
+     padding-bottom: 100px;
      position:centered;
     }
   </style>
 </head>
 <body>
 
-  <section class='shelter_show'>
-  <h1><%= @shelter.name %></h1>
-  <h3>Info</h3>
-      <h3 class='name'> <%= @shelter[:name]  %></h3>
+  <section class='shelters'>
+    <div class = 'shelter_show'>
+      <h3 class='show_name'> <%= @shelter[:name]  %></h3>
       <p class='phone_number'> Phone: <%= @shelter[:phone_number] %></p>
       <p class='address'> <%= @shelter[:address] %></p>
       <h3>Special Services</h3>
+    </div>
   </section>
   <!--The div element for the map -->
   <div id="map"></div>

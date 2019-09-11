@@ -311,6 +311,14 @@ p {
 
 .shelter_show{
   text-align: center;
+  color: white;
+  /* background-color: red; */
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+}
+
+.show_name{
+  color: sandybrown;
 }
 /*
 .navbar-collapse {
