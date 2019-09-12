@@ -4,6 +4,19 @@
     <span class="site-heading-upper text-primary mb-3">Everyone Deserves A Safe Space to Sleep</span>
     <span class="site-heading-lower"><b>Sleep Safe</b></span>
   </h1>
+
+  <div class="collapse_2 navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <%= form_tag :search, method: :get, class: "form-inline" do %>
+        <div class="form-group search-field">
+          <%= text_field_tag :q, nil, placeholder: "Search by Zipcode", class: "form-control"%>
+          <%= text_field_tag :radius, nil, placeholder: "2 Miles", class: "form-control"%>
+          <%= submit_tag "Search",  class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+
   <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
@@ -13,7 +26,7 @@
             <span class="section-heading-upper">Your Sleep is</span>
             <span class="section-heading-lower">Our Mission</span>
           </h2>
-          <p class="mb-3">To Provide a resourse that helps you find a safe space for a good nights sleep no matter where in the world you are.
+          <p class="mb-3"> Search for shelters near you!!! Enter your zipcode and an optional radius to get started.
           </p>
           <div class="intro-button mx-auto">
             <a class="btn btn-primary btn-xl" href="#"> Sign Up Today!</a>

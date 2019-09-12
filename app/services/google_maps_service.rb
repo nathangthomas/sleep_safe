@@ -38,7 +38,8 @@ class GoogleMapsService
     hours = detailed_shelter_data[:result][:opening_hours]
     lat = detailed_shelter_data[:result][:geometry][:location][:lat]
     lng = detailed_shelter_data[:result][:geometry][:location][:lng]
-    Shelter.create!(name: name, address: address, phone_number: phone_number, hours: hours, latitude: lat, longitude: lng, zip: zip)
+    place_id = detailed_shelter_data[:result][:place_id]
+    Shelter.create!(name: name, address: address, phone_number: phone_number, hours: hours, latitude: lat, longitude: lng, zip: zip, place_id: place_id)
   end
 
   private
