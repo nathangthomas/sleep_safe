@@ -22,7 +22,7 @@
          "id": "edfede739d1a9dbbe9a3010f04903ca6527f5882",
          "name": "Colorado Coalition for the Homeless",
          "opening_hours": {
-            "open_now": false
+            "open_now": true
          },
          "place_id": "ChIJNwoB8Nh4bIcRhy3047QC7lM",
          "plus_code": {
@@ -41,3 +41,6 @@
          "user_ratings_total": 17,
          "vicinity": "2111 Champa St, Denver"
       }
+   ],
+   "status": "OK"
+}
