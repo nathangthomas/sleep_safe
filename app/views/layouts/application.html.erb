@@ -34,19 +34,6 @@
 
             <ul class="navbar-nav mx-auto">
 
-
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <%= form_tag :search, method: :get, class: "form-inline" do %>
-                    <div class="form-group search-field">
-                      <%= text_field_tag :q, "Search by zipcode", class: "form-control" %>
-                      <%= text_field_tag :radius, "Radius", :value => 1, class: "form-control" %>
-                      <%= submit_tag "Search",  class: "btn btn-primary" %>
-                    </div>
-                  <% end %>
-                </ul>
-              </div>
-
               <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" <%=link_to "Home", root_path %></a>
                 <span class="sr-only">(current)</span>
