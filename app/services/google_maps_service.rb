@@ -12,7 +12,8 @@ class GoogleMapsService
   end
 
   def get_place_ids
-    conn_params = {"radius": @zip_code, "keyword": "homeless shelter", "location": coordinates}
+    conn_params = {"radius": @zip_code, "keyword": "homeless
+    shelter", "location": coordinates}
     place_ids = get_json(conn_params, "https://maps.googleapis.com/maps/api/place/nearbysearch/json?")[:results]
     place_ids.map{|shelter| shelter[:place_id]}
   end
