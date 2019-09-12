@@ -63,14 +63,14 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
-#
-# def stub_google_maps_api_calls
-#   coordinates = File.open("./fixtures/coordinates.json")
-#   stub_request(:get, "https://maps.googleapis.com/maps/api/geocode").to_return(status:200, body:coordinates)
-#
-#   get_place_ids = File.open("./fixtures/shelter_place_ids.json")
-#   stub_request(:get, "https://maps.googleapis.com/maps/api/place/nearbysearch/json?").to_return(status:200, body:get_place_ids)
-#
-#   shelters_by_zip_code = File.open("./fixtures/shelters.json")
-#   stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json?").to_return(status:200, body:shelters_by_zip_code)
-# end
+
+def stub_google_maps_api_calls
+  coordinates = File.read("./fixtures/coordinates.json")
+  stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:80202&key=#{ENV["GOOGLE_PLACES_API_KEY"]}").to_return(status:200, body:coordinates)
+
+  get_place_ids = File.read("./fixtures/shelter_place_ids.json")
+  stub_request(:get, "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=#{ENV["GOOGLE_PLACES_API_KEY"]}&keyword=homeless%0A%20%20%20%20shelter&location=39.7541032,-105.0002242&radius=80202").to_return(status:200, body:get_place_ids)
+
+  shelters_by_zip_code = File.read("./fixtures/shelters.json")
+  stub_request(:get, "https://maps.googleapis.com/maps/api/place/details/json?fields=name,formatted_address,formatted_phone_number,opening_hours,geometry&key=#{ENV["GOOGLE_PLACES_API_KEY"]}&placeid=ChIJNwoB8Nh4bIcRhy3047QC7lM").to_return(status:200, body:shelters_by_zip_code)
+end
