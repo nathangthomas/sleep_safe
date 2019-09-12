@@ -10,7 +10,7 @@ describe 'User can see list of shelters' do
         address: "1130 Park Ave W, Denver, CO 80205, USA", phone_number: "(303) 294-0157", hours: "24/7", latitude: "39.75149449999999", longitude: "-104.987716", zip: "80202")
 
       visit root_path
-      within('.navbar') do
+      within('.search_bar') do
         fill_in :q, with: '80202'
         fill_in :radius, with: 10
         click_button 'Search'

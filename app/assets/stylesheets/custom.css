@@ -74,8 +74,8 @@ p {
 
 .page-section {
   margin-right: 300px;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .section-heading {
@@ -336,11 +336,7 @@ p {
 
 .collapse_2{
   /* background-color: red; */
-  margin-left: 500px;
-}
-
-.container{
-
+  margin-left: 480px;
 }
 
 .navbar{

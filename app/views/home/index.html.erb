@@ -1,11 +1,14 @@
 
+<div class="container">
 <body>
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Everyone Deserves A Safe Space to Sleep</span>
     <span class="site-heading-lower"><b>Sleep Safe</b></span>
   </h1>
+</div>
 
   <div class="collapse_2 navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="search_bar">
     <ul class="nav navbar-nav">
       <%= form_tag :search, method: :get, class: "form-inline" do %>
         <div class="form-group search-field">
@@ -16,6 +19,8 @@
       <% end %>
     </ul>
   </div>
+</div>
+
 
   <section class="page-section clearfix">
     <div class="container">
@@ -26,10 +31,10 @@
             <span class="section-heading-upper">Your Sleep is</span>
             <span class="section-heading-lower">Our Mission</span>
           </h2>
-          <p class="mb-3"> Search for shelters near you!!! Enter your zipcode and an optional radius to get started.
+          <p class="mb-3"> Search for shelters near you in the search bar above or text us your zipcode for the same search results on go (no smartphone needed)!
           </p>
           <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="#"> Sign Up Today!</a>
+            <a class="btn btn-primary btn-xl" href=/users/sign_up> Sign Up Today!</a>
           </div>
         </div>
       </div>
