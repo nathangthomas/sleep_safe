@@ -11,15 +11,14 @@
 <link href="https://blackrockdigital.github.io/startbootstrap-business-casual/css/business-casual.min.css" rel="stylesheet">
 
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= stylesheet_link_tag "custom" %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag "custom" %>
   <%=javascript_include_tag "https://www.authy.com/form.authy.min.js" %>
   <%=stylesheet_link_tag "https://www.authy.com/form.authy.min.css" %>
+</head>
 
-
-  </head>
-  <header>
+  <!-- <header> -->
     <!-- <nav class="navbar navbar-default navbar-fluid">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -48,7 +47,7 @@
          <li> <%=link_to "Shelters", shelters_path%>> </li>
        </ul> -->
      </nav> -->
-  </header>
+  <!-- </header> -->
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -59,46 +58,43 @@
           <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Sleep Safe</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
+
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav mx-auto">
 
+        <ul class="navbar-nav mx-auto">
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" <%=link_to "Home", root_path %></a>
+          <span class="sr-only">(current)</span>
+        </li>
+        <% if current_user != nil %>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" <%=link_to "Logout", destroy_user_session_path, method: :delete%></a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" <%= link_to "Dashboard", dashboard_path%></a>
+        </li>
+        <% else %>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" <%= link_to "Sign Up", new_user_registration_path %></a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" <%= link_to "Log In", new_user_session_path %></a>
+        </li>
+        <% end %>
 
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <%= form_tag :search, method: :get, class: "form-inline" do %>
-                    <div class="form-group search-field">
-                      <%= text_field_tag :q, "Search by zipcode", class: "form-control" %>
-                      <%= text_field_tag :radius, "Radius", :value => 1, class: "form-control" %>
-                      <%= submit_tag "Search",  class: "btn btn-primary" %>
-                    </div>
-                  <% end %>
-                </ul>
-              </div>
+    </ul>
+  </div>
+</div>
 
-              <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" <%=link_to "Home", root_path %></a>
-                <span class="sr-only">(current)</span>
-              </li>
-              <% if current_user != nil %>
-              <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" <%=link_to "Logout", destroy_user_session_path, method: :delete%></a>
-              </li>
-              <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" <%= link_to "Dashboard", dashboard_path%></a>
-              </li>
-              <% else %>
-              <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" <%= link_to "Sign Up", new_user_registration_path %></a>
-              </li>
-              <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" <%= link_to "Log In", new_user_session_path %></a>
-              </li>
-              <% end %>
+<div class="flexbox">
+  <div class="search">
+    <div>
+      <input id="searchbar" onekeyup="search_shelters()" type="text" name="search" placeholder="Enter Your Zipcode" href=/search required >
+    </div>
+  </div>
+</div>
 
-            </ul>
-          </div>
-        </div>
       </nav>
     <main>
         <%= yield %>
@@ -114,5 +110,12 @@
 
   <script src="https://blackrockdigital.github.io/startbootstrap-business-casual/vendor/jquery/jquery.min.js"></script>
   <script src="https://blackrockdigital.github.io/startbootstrap-business-casual/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  <% def search_for_shelters %>
+    <% input = :q %>
+      <% end %>
+
+  </script>
   </body>
 </html>
