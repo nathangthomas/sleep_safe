@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :events
   resources :shelters, only: [:index, :show]
   root "home#index"
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   post "users/resend"
 
   # constraints subdomain: "webhooks" do
-  post'/incoming', to: "webhooks#receive"
+  post '/incoming', to: "webhooks#receive"
   end
 
 

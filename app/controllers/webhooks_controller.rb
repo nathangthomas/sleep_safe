@@ -1,11 +1,8 @@
-class WebhooksController < ApplicationController
-
+class WebhooksController < ActionController::API
   def receive
-    if request.headers['Content-Type'] == 'application/json'
-      data = JSON.parse(request.body.read)
-    else
-      data = params.as_json
-    end
-    response =  Shelter.near(data, 10, :order => :distance)
+      data = request.body
+      response = {response.body: Shelter.near(data.read, 1000000, :order => :distance).limit(3)}
+      binding.pry
   end
+
 end

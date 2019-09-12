@@ -20,6 +20,8 @@
 
   </head>
   <header>
+    <nav>
+
     <!-- <nav class="navbar navbar-default navbar-fluid">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -94,7 +96,11 @@
               <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" <%= link_to "Log In", new_user_session_path %></a>
               </li>
+
+              <li class="nav-item px-lg-4">
+              </li>
               <% end %>
+              <a class="nav-link text-uppercase text-expanded" <%= link_to "Events", events_path %></a>
 
             </ul>
           </div>
