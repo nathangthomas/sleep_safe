@@ -1,7 +1,6 @@
 <div class="container">
   <section>
     <%= form_tag new_user_session_path do %>
-
       <%= label_tag :email %>
       <%= text_field_tag :email, params[:email] %>
 
@@ -11,4 +10,5 @@
       <%= submit_tag 'Login' %>
     <% end %>
   </section>
+
 </div>
