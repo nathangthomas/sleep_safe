@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @event.name %></h1>
+<img src= <%= @event.image %>>
+<h2> Description</h2>
+<p> <%= @event.description %></p>
+<h2>Where</h2>
+<dl>
+  <dd>Address: <%= @event.address %></dd>
+  <dd>City: <%= @event.city %></dd>
+  <dd>State: <%= @event.state %></dd>
+  <dd>Zip: <%= @event.zip %></dd>
+
+</dl>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
