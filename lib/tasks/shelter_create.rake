@@ -10,7 +10,7 @@ namespace :import do
     denver_zipcodes = [80202]
 
     denver_zipcodes.each do |zip|
-      service = GoogleMapsService.new(zip, 10)
+      service = GoogleMapsService.new(zip, 16093.4)
       service.shelters_by_zip_code.map do |shelter_data|
         creator = ShelterCreator.new
         creator.create_record(shelter_data)
