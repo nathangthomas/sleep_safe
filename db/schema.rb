@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 2019_09_12_163913) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.string "date"
+    t.string "time"
     t.string "address"
     t.string "city"
     t.string "state"

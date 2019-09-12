@@ -36,6 +36,7 @@ gem 'authy'
 
 # Use Twilio to send confirmation message
 gem 'twilio-ruby'
+gem 'fast_jsonapi'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
