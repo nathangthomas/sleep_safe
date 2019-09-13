@@ -6,4 +6,6 @@ class User < ApplicationRecord
   devise :authy_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
 
+  validates_presence_of :first_name, :last_name, :phone_number, :email, :password
+
 end
