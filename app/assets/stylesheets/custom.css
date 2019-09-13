@@ -363,14 +363,15 @@ p {
 #navbarResponsive{
   margin-left: 2px;
   margin-right: 100px;
-} */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+}
 
-* {
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700"); */
+
+ /* {
   font-family: Roboto, sans-serif;
   padding: 0;
   margin: 0;
-}
+} */
 
 html, body {
   width: 100%;
