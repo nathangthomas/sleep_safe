@@ -15,13 +15,8 @@ describe 'As a User' do
       visit shelter_path(@shelter_1)
       expect(page).to have_content(@shelter_1.name)
       expect(page).to have_content(@shelter_1.phone_number)
-
-      # expect(page).to have_content(@shelter_1.website)
-      # expect(page).to have_content(@shelter_1.address)
-      # expect(page).to have_content(@shelter_1.city)
-      # expect(page).to have_content(@shelter_1.state)
-      # expect(page).to have_content(@shelter_1.zip)
-      expect(page).to have_content(@shelter_1.phone_number)
+      expect(page).to have_content(@shelter_1.address)
+      expect(page).to have_css("#map")
     end
   end
 end
