@@ -9,7 +9,7 @@ describe 'As a User without an account' do
       expect(current_path).to eq(new_user_registration_path)
     end
 
-    it 'I fill out a form and click o sign up and a my profile is created' do
+    it 'I fill out a form and click to sign up and a my profile is created' do
       visit new_user_registration_path
        fill_in "First name", with: "Will"
        fill_in "Last name", with: "Thompson"
@@ -18,7 +18,7 @@ describe 'As a User without an account' do
        fill_in "Password", with: "123456"
        fill_in "Password confirmation", with: "123456"
        click_button "Sign up"
-       expect(current_path).to eq(root_path)
+       expect(current_path).to eq("/users/verify")
      end
   end
 end

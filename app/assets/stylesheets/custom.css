@@ -335,21 +335,19 @@ p {
 
 
 .collapse_2{
-  /* background-color: red; */
-  margin-left: 480px;
+  margin-left: 720px;
+  text-align: center;
 }
 
 .navbar{
 
 }
-/*
+
 .navbar-collapse {
-  margin-right: 0px;
-  background-color: red;
+  vertical-align: center;
 }
 
 .navbar-nav {
-  background-color: magenta;
 }
 
 
