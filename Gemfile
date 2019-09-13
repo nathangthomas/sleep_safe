@@ -63,10 +63,11 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
-  gem 'simplecov'
+  gem 'simplecov', require: false
   gem 'webmock'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 group :development do

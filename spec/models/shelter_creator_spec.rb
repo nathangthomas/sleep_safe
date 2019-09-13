@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe ShelterCreator, type: :model do
   it "creates a shelter record" do
+
+     WebMock.allow_net_connect!
     shelter_data = {
       :formatted_address=>"1130 Park Ave W, Denver, CO 80205, USA",
       :formatted_phone_number=>"(303) 294-0157",
