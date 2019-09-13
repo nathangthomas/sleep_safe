@@ -34,27 +34,5 @@ describe 'As a registered User' do
        expect(current_path).to eq(dashboard_path)
      end
    end
-
-    describe "I can update my profile" do
-      it "When I visit my dashboard and click the link to edit my profile I am taken to a edit form" do
-      visit dashboard_path
-      click_on "Edit my Profile"
-      expect(current_path).to eq(edit_user_registration_path)
-      end
-    end
-
-    describe "When I fill in the update" do
-      it "updated my information on the dashboard" do
-        visit dashboard_path
-        click_on "Edit my Profile"
-        fill_in "First name", with: "John"
-        fill_in "Last name", with: "Thompson"
-        fill_in "Current password", with: "123456"
-        click_on "Update"
-        expect(page).to have_content('Your account has been updated successfully.')
-        visit dashboard_path
-        expect(page).to have_content('John')
-      end
-    end
   end
 end
