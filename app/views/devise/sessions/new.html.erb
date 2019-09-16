@@ -1,14 +1,15 @@
 <div class="container">
-  <section>
+  <section style="text-align:center;">
     <%= form_tag new_user_session_path do %>
-      <%= label_tag :email %>
+      <font color="sandybrown"><%= label_tag :email %></font>
+      </br>
       <%= text_field_tag :email, params[:email] %>
-
-      <%= label_tag :password %>
+      </br>
+      <font color="sandybrown"><%= label_tag :password %></font>
+      </br>
       <%= password_field_tag :password %>
-
+    </section>
+      </br>
       <%= submit_tag 'Login' %>
     <% end %>
-  </section>
-
 </div>

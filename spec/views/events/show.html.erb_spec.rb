@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "shelters/show", type: :view do
+RSpec.describe "events/show", type: :view do
   before(:each) do
-    @shelter = assign(:shelter, Shelter.create!())
+    @event = assign(:event, Event.create!())
   end
 
   it "renders attributes in <p>" do

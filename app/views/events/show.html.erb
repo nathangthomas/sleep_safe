@@ -1,0 +1,30 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+  <h1 style="color:white" ><u><%= @event.name %></u></h1>
+
+<img src= <%= @event.image %>>
+<h2 style="color:white"> Description</h2>
+<br>
+<p style="color:white"> <%= @event.description %></p>
+
+<h2 style="color:white">When</h2>
+<br>
+<dl style="color:white">
+  <dd>Time: <%= @event.time %></dd>
+  <dd>Date: <%= @event.date %></dd>
+  <
+</dl>
+
+<h2 style="color:white">Where</h2>
+<br>
+<dl style="color:white">
+  <dd>Address: <%= @event.address %></dd>
+  <dd>City: <%= @event.city %></dd>
+  <dd>State: <%= @event.state %></dd>
+  <dd>Zip: <%= @event.zip %></dd>
+</dl>
+
+<%= link_to 'Back', events_path %>
+</div>
