@@ -5,6 +5,8 @@ class SearchController < ApplicationController
     @shelters = Shelter.near(params[:q], search_radius, :order => :distance)
   end
 
+private
+
   def search_radius
     if params[:radius].present?
       params[:radius]

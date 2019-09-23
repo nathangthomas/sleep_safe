@@ -63,6 +63,16 @@
           </div>
         </div>
       </center>
+
+<div class="flexbox">
+  <div>
+
+        <%= form_tag :search, method: :get do %>
+        <%= text_field_tag :q, nil, placeholder: "Search by Zipcode" %>
+        <%= submit_tag "Search" %>
+        <% end %>
+  </div>
+</div>
 <!-- <div class="flexbox">
   <div class="search">
     <div>
