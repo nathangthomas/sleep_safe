@@ -23,8 +23,9 @@ font-weight: bold;
 
 body {
   font-family: 'Lora';
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/videoblocks-sparkly-light-particles-flickering-on-dark-purple-background-imitating-a-night-sky-full-of-stars_rjoc4ibte_thumbnail-full01.png");
-  background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/videoblocks-sparkly-light-particles-flickering-on-dark-purple-background-imitating-a-night-sky-full-of-stars_rjoc4ibte_thumbnail-full01.png");
+  /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.10))), url("https://websitevision.co.uk/uploads/Clients/Projects/Milky%20Way/milky_way_header_2.jpg"); */
+  /* background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg"); */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -53,8 +54,8 @@ p {
 }
 
 .site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   line-height: 1;
   font-family: 'Raleway';
@@ -73,9 +74,15 @@ p {
 }
 
 .page-section {
-  margin-right: 300px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-right: 300px; */
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: red;
+}
+
+.search_bar {
+display: inline-block;
 }
 
 .section-heading {
@@ -84,8 +91,9 @@ p {
 
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 800;
+
 }
 
 .section-heading .section-heading-lower {
@@ -139,24 +147,30 @@ p {
 }
 
 .intro {
+
+  display: inline-block;
   position: relative;
+}
+
+.block{
+  display: inline-block
 }
 
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
-    float: right;
+    /* float: right; */
   }
-  .intro .intro-text {
+  .intro {
     left: 0;
     width: 60%;
-    margin-top: 3rem;
-    position: absolute;
+    /* margin-top: 3rem; */
+    /* position: absolute; */
   }
   .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
-    position: absolute;
+    /* position: absolute; */
     bottom: -2rem;
     margin: auto;
   }
@@ -197,7 +211,7 @@ p {
     position: relative;
     z-index: 0;
   }
-  .about-heading .about-heading-content {
+  .about-heading .about-heading-content{
     margin-top: -5rem;
     position: relative;
     z-index: 1;
@@ -284,10 +298,10 @@ p {
 .footer {
  margin-top: -80px;
 }
-
+/*
 .intro-text{
   margin-left: 450px;
-}
+} */
 
 .shelters{
   text-align: center;
@@ -335,7 +349,6 @@ p {
 
 
 .collapse_2{
-  margin-left: 720px;
   text-align: center;
 }
 
@@ -343,9 +356,9 @@ p {
 
 }
 
-.navbar-collapse {
+/* .navbar-collapse {
   vertical-align: center;
-}
+} */
 
 .navbar-nav {
 }
@@ -355,10 +368,10 @@ p {
   margin-left: 2px;
   background-color: black;
 }
-
+/*
 #bs-example-navbar-collapse-1{
   margin-right: 300px;
-}
+} */
 
 #navbarResponsive{
   margin-left: 2px;
