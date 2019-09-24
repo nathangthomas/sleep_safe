@@ -14,11 +14,17 @@
 </head>
 <body>
 
+
+
+
   <section class='show_shelters'>
     <div class = 'shelter_show'>
       <h3 class='show_name'> <%= @shelter[:name]  %></h3>
-      <p class='phone_number'> Phone: <%= @shelter[:phone_number] %></p>
-      <p class='address'> <%= @shelter[:address] %></p>
+      <!-- <p class='phone_number'> Phone: <%= @shelter[:phone_number] %></p> -->
+      <p class='fas fa-phone-alt' 'phone_number'>  <%= @shelter[:phone_number]%></p>
+      <br>
+      <!-- <p class='address'> <%= @shelter[:address] %></p> -->
+      <p class='fas fa-map-marker-alt' 'address'> <%= @shelter[:address] %></p>
     <br>
     <br>
       <!-- <h3>Special Services</h3> -->

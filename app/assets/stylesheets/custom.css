@@ -6,15 +6,15 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.jumbotron h1 {
+/* .jumbotron h1 {
 
 color: #FFFFFF;
 font-size: 48px;
 
 font-family: 'Shift', sans-serif;
-font-weight: bold;
+font-weight: bold; */
 
-} */
+
 /*!
  * Start Bootstrap - Business Casual v5.0.8 (https://startbootstrap.com/template-overviews/business-casual)
  * Copyright 2013-2019 Start Bootstrap
@@ -23,8 +23,10 @@ font-weight: bold;
 
 body {
   font-family: 'Lora';
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/videoblocks-sparkly-light-particles-flickering-on-dark-purple-background-imitating-a-night-sky-full-of-stars_rjoc4ibte_thumbnail-full01.png");
-  background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/videoblocks-sparkly-light-particles-flickering-on-dark-purple-background-imitating-a-night-sky-full-of-stars_rjoc4ibte_thumbnail-full01.png");
+
+  /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.10))), url("https://websitevision.co.uk/uploads/Clients/Projects/Milky%20Way/milky_way_header_2.jpg"); */
+  /* background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg"); */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -53,8 +55,8 @@ p {
 }
 
 .site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   line-height: 1;
   font-family: 'Raleway';
@@ -73,9 +75,15 @@ p {
 }
 
 .page-section {
-  margin-right: 300px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-right: 300px; */
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  /* background-color: red; */
+}
+
+.search_bar {
+display: inline-block;
 }
 
 .section-heading {
@@ -84,8 +92,9 @@ p {
 
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 800;
+
 }
 
 .section-heading .section-heading-lower {
@@ -108,9 +117,11 @@ p {
   color: #e6a756;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-nav .nav-item .
+ {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
+
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -139,34 +150,46 @@ p {
 }
 
 .intro {
+  display: inline-block;
   position: relative;
+  text-align: center;
+  width: 75%;
+  padding-left: 200px;
+  padding-right:200px;
+
 }
 
-@media (min-width: 992px) {
+
+.block{
+  display: inline-block
+}
+
+/* @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
-    float: right;
-  }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
+    /* float: right; */ */
+  /* } */
+  /* .intro { */
+    /* left: 0; */
+    /* width: 60%; */
+    /* margin-top: 3rem; */
+    /* position: relative;
+    text-align: center;
+  } */
+  /* .intro .intro-text .intro-button {
+    width: 100%; */
+    /* left: 0; */
+    /* position: absolute;
     bottom: -2rem;
     margin: auto;
   }
-}
+} */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
   }
-}
+} */
 
 .cta {
   padding-top: 5rem;
@@ -197,7 +220,7 @@ p {
     position: relative;
     z-index: 0;
   }
-  .about-heading .about-heading-content {
+  .about-heading .about-heading-content{
     margin-top: -5rem;
     position: relative;
     z-index: 1;
@@ -284,10 +307,10 @@ p {
 .footer {
  margin-top: -80px;
 }
-
+/*
 .intro-text{
   margin-left: 450px;
-}
+} */
 
 .shelters{
   text-align: center;
@@ -321,9 +344,13 @@ p {
   color: sandybrown;
 }
 
-.sign-in-container{
-  margin-top: 20px;
+.dashboard_name{
+  color: white;
 }
+
+/* .sign-in-container{
+  margin-top: 20px;
+} */
 
 .form-label{
   color: sandybrown;
@@ -335,7 +362,6 @@ p {
 
 
 .collapse_2{
-  margin-left: 720px;
   text-align: center;
 }
 
@@ -343,11 +369,12 @@ p {
 
 }
 
-.navbar-collapse {
-  vertical-align: center;
-}
+/* .navbar-collapse {
+  text-align: right;
+} */
 
 .navbar-nav {
+
 }
 
 
@@ -355,14 +382,16 @@ p {
   margin-left: 2px;
   background-color: black;
 }
-
+/*
 #bs-example-navbar-collapse-1{
   margin-right: 300px;
-}
+} */
 
 #navbarResponsive{
+  display: inline-block;
   margin-left: 2px;
-  margin-right: 100px;
+  margin-right: 10px;
+
 }
 
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700"); */
@@ -380,11 +409,11 @@ html, body {
 
 .flexbox {
   background: linear-gradient(155deg, #55c7ed);
-  width: 100%;
+  width: 25%;
   height: 100%;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  /* justify-content: right;
+  align-items: center; */
 }
 
 .search {
@@ -450,4 +479,76 @@ html, body {
 .search > div > input:focus,
 .search > div > input:valid {
   width: 250px;
+}
+
+.button:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  }
+
+.jumbotron {
+
+background-image: url("jumbotron_bg.jpg");
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.jumbotron h1 {
+
+color: #FFFFFF;
+font-size: 48px;
+
+font-family: 'Shift', sans-serif;
+font-weight: bold;
+}
+
+.events {
+  color: sandybrown;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  /* background-color: #bbb; */
+  color: black;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("http://www.warwidowsstories.org.uk/wp-content/uploads/2016/10/creative-wood-textures-crumpled-paper-texture-free.jpg");
+}
+
+.flip-card-back {
+  /* background-color: #2980b9; */
+  background :-webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("http://www.warwidowsstories.org.uk/wp-content/uploads/2016/10/creative-wood-textures-crumpled-paper-texture-free.jpg");
+  color: black;
+  transform: rotateY(180deg);
 }

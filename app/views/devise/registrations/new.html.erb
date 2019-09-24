@@ -15,10 +15,11 @@
     <%= f.text_field :last_name %>
   </div>
 
-  <div class="field">
+<!-- country code is set with default of 1 for USA in database. The below code has been omitted since app demo is only for use in USA.  -->
+  <!-- <div class="field">
     <%= f.label :country_code, class: 'form-label'%><br />
     <%= f.number_field :country_code  %>
-  </div>
+  </div> -->
   <div class="field">
     <%= f.label :phone_number, class: 'form-label'%><br />
     <%= f.text_field :phone_number  %>
@@ -42,7 +43,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-
+<br>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
