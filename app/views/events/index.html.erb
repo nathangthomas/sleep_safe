@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1 style="color:white">Events</h1>
+<h1 class='events'>Events</h1>
 
-<table class = 'table table-hover'>
+<!-- <table class = 'table table-hover'>
   <thead>
     <tr>
       <td style="color:white">Event Name</td>
@@ -19,6 +19,22 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
+<!-- <br> -->
 
-<br>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Event Name</h1> <br>
+      <h3>Event Date</h3>
+      <% @events.each do |event| %>
+        <h1><%= link_to "#{event.name}", event_path(event) %></h1>
+        <p><%= event.date %></p>
+      <% end %>
+    </div>
+    <div class="flip-card-back">
+      <h1>Event Details</h1>
+      <p style="color:white">Replace this with event details. There are so many details to share about this awesome event. Bring all of your friends. This event is going to be so much fun please join us! </p>
+    </div>
+  </div>
+</div>

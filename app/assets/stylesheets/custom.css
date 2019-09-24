@@ -117,7 +117,8 @@ display: inline-block;
   color: #e6a756;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-nav .nav-item .
+ {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
 
@@ -152,38 +153,43 @@ display: inline-block;
   display: inline-block;
   position: relative;
   text-align: center;
+  width: 75%;
+  padding-left: 200px;
+  padding-right:200px;
+
 }
+
 
 .block{
   display: inline-block
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
-    /* float: right; */
-  }
-  .intro {
+    /* float: right; */ */
+  /* } */
+  /* .intro { */
     /* left: 0; */
-    width: 60%;
+    /* width: 60%; */
     /* margin-top: 3rem; */
-    position: relative;
+    /* position: relative;
     text-align: center;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
+  } */
+  /* .intro .intro-text .intro-button {
+    width: 100%; */
     /* left: 0; */
-    position: absolute;
+    /* position: absolute;
     bottom: -2rem;
     margin: auto;
   }
-}
+} */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
   }
-}
+} */
 
 .cta {
   padding-top: 5rem;
@@ -475,7 +481,13 @@ html, body {
   width: 250px;
 }
 
+.button:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  }
+
 .jumbotron {
+
 background-image: url("jumbotron_bg.jpg");
 
 background-repeat: no-repeat;
@@ -489,3 +501,54 @@ font-size: 48px;
 
 font-family: 'Shift', sans-serif;
 font-weight: bold;
+}
+
+.events {
+  color: sandybrown;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  /* background-color: #bbb; */
+  color: black;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("http://www.warwidowsstories.org.uk/wp-content/uploads/2016/10/creative-wood-textures-crumpled-paper-texture-free.jpg");
+}
+
+.flip-card-back {
+  /* background-color: #2980b9; */
+  background :-webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("http://www.warwidowsstories.org.uk/wp-content/uploads/2016/10/creative-wood-textures-crumpled-paper-texture-free.jpg");
+  color: black;
+  transform: rotateY(180deg);
+}
