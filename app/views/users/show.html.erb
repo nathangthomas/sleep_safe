@@ -4,7 +4,10 @@
       <h1><%= "#{@user.first_name }"%>'s Dashboard</h1>
     </div>
     <div class="info">
-      <h3 class ="dashboard_name"> My Info </h3>
+
+      <h3 class = "dashboard_name fas fa-info-circle" > My Info </h3>
+
+
       <ul>
         <li>Name: <%= @user.first_name + " " + @user.last_name  %></li>
         <li>Phone: <%= @user.phone_number %></li>
