@@ -62,14 +62,16 @@
             </ul>
           </div>
         </div>
-    
+
 
 <div class="flexbox">
   <div>
-
         <%= form_tag :search, method: :get do %>
         <%= text_field_tag :q, nil, placeholder: "Search by Zipcode" %>
-        <%= submit_tag "Search" %>
+        <%= button_tag type: 'submit', class: "button my-button" do %>
+        <i class="fas fa-search" aria-hidden="true"></i>
+    <% end %>
+
         <% end %>
   </div>
 </div>
@@ -103,5 +105,14 @@
       <% end %>
 
   </script>
+
+<div>
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name %>" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+</div>
+
   </body>
 </html>

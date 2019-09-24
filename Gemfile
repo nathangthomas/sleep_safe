@@ -5,7 +5,6 @@ ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-gem 'faker'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -55,6 +54,7 @@ gem 'faraday'
 gem 'json'
 
 gem 'sidekiq'
+gem 'font-awesome-sass', '~> 5.11.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -66,8 +66,8 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'webmock'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'shoulda-matchers'
+  gem 'faker'
 end
 
 group :development do

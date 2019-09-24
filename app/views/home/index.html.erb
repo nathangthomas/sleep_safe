@@ -1,49 +1,46 @@
 
-<div class="container">
 <body>
-  <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">Everyone Deserves A Safe Space to Sleep</span>
-    <span class="site-heading-lower"><b>Sleep Safe</b></span>
-  </h1>
-</div>
-
+  <div class="container">
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Everyone Deserves A Safe Space to Sleep</span>
+      <span class="site-heading-lower"><b>Sleep Safe</b></span>
+    </h1>
+  </div>
 
   <div class="collapse_2 navbar-collapse" id="bs-example-navbar-collapse-1">
     <div class="search_bar">
-    <ul class="nav navbar-nav">
-      <%= form_tag :search, method: :get, class: "form-inline" do %>
+      <ul class="nav navbar-nav"><%= form_tag :search, method: :get, class: "form-inline" do %>
         <div class="form-group search-field">
           <%= text_field_tag :q, nil, placeholder: "Search by Zipcode", class: "form-control"%>
           <%= text_field_tag :radius, nil, placeholder: "2 Miles", class: "form-control"%>
           <%= submit_tag "Search",  class: "btn btn-primary" %>
         </div>
-      <% end %>
-    </ul>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</div>
 
-
-<section class="page-section clearfix">
-  <!-- <div class="block" -->
+  <section class="page-section">
     <div class="intro">
-        <!-- <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="https://blackrockdigital.github.io/startbootstrap-business-casual/img/intro.jpg" alt=""> -->
-        <div class="intro-text left-0 text-center bg-faded p-4 rounded">
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Your Sleep is</span>
-            <span class="section-heading-lower">Our Mission</span>
-          </h2>
-          <p class="mb-3"> Sleep Safe is a tool to help you find nearby shelter. <br>
-            Simply use the search bar above or text us your zipcode at 832-391-5373 to view a list of shelters in your area (no smartphone needed)!
-            <br>
-            <br>
-          </p>
-          <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href=/users/sign_up> Sign Up Today!</a>
-          </div>
+      <!-- <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="https://blackrockdigital.github.io/startbootstrap-business-casual/img/intro.jpg" alt=""> -->
+      <div class="intro-text left-0 text-center bg-faded p-4 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Your Sleep is</span>
+          <span class="section-heading-lower">Our Mission</span>
+        </h2>
+        <p class="mb-3"> Sleep Safe is a tool to help you find nearby shelter. <br>
+          Simply use the search bar above or text us your zipcode at 832-391-5373 to view a list of shelters in your area (no smartphone needed)!
+          <br>
+          <br>
+        </p>
+        <div class="intro-button mx-auto">
+          <a class="btn btn-primary btn-xl" href=/users/sign_up> Sign Up Today!</a>
         </div>
-        </div>
-      <!-- </div> -->
+      </div>
+    </div>
   </section>
+
+
 
   <!-- <section class="page-section cta">
     <div class="container">
@@ -62,6 +59,6 @@
   </section> -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+  <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 </body>

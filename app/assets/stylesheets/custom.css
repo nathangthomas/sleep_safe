@@ -6,15 +6,15 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.jumbotron h1 {
+/* .jumbotron h1 {
 
 color: #FFFFFF;
 font-size: 48px;
 
 font-family: 'Shift', sans-serif;
-font-weight: bold;
+font-weight: bold; */
 
-} */
+
 /*!
  * Start Bootstrap - Business Casual v5.0.8 (https://startbootstrap.com/template-overviews/business-casual)
  * Copyright 2013-2019 Start Bootstrap
@@ -24,6 +24,7 @@ font-weight: bold;
 body {
   font-family: 'Lora';
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/videoblocks-sparkly-light-particles-flickering-on-dark-purple-background-imitating-a-night-sky-full-of-stars_rjoc4ibte_thumbnail-full01.png");
+
   /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.10))), url("https://websitevision.co.uk/uploads/Clients/Projects/Milky%20Way/milky_way_header_2.jpg"); */
   /* background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg"); */
   background-attachment: fixed;
@@ -78,7 +79,7 @@ p {
   text-align: center;
   margin-top: 1px;
   margin-bottom: 1px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .search_bar {
@@ -119,6 +120,7 @@ display: inline-block;
 #mainNav .navbar-nav .nav-item .nav-link {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
+
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -147,9 +149,9 @@ display: inline-block;
 }
 
 .intro {
-
   display: inline-block;
   position: relative;
+  text-align: center;
 }
 
 .block{
@@ -162,15 +164,16 @@ display: inline-block;
     /* float: right; */
   }
   .intro {
-    left: 0;
+    /* left: 0; */
     width: 60%;
     /* margin-top: 3rem; */
-    /* position: absolute; */
+    position: relative;
+    text-align: center;
   }
   .intro .intro-text .intro-button {
     width: 100%;
-    left: 0;
-    /* position: absolute; */
+    /* left: 0; */
+    position: absolute;
     bottom: -2rem;
     margin: auto;
   }
@@ -335,6 +338,10 @@ display: inline-block;
   color: sandybrown;
 }
 
+.dashboard_name{
+  color: white;
+}
+
 /* .sign-in-container{
   margin-top: 20px;
 } */
@@ -357,10 +364,11 @@ display: inline-block;
 }
 
 /* .navbar-collapse {
-  vertical-align: center;
+  text-align: right;
 } */
 
 .navbar-nav {
+
 }
 
 
@@ -374,8 +382,10 @@ display: inline-block;
 } */
 
 #navbarResponsive{
+  display: inline-block;
   margin-left: 2px;
-  margin-right: 100px;
+  margin-right: 10px;
+
 }
 
 /* @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700"); */
@@ -393,11 +403,11 @@ html, body {
 
 .flexbox {
   background: linear-gradient(155deg, #55c7ed);
-  width: 100%;
+  width: 25%;
   height: 100%;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  /* justify-content: right;
+  align-items: center; */
 }
 
 .search {
@@ -464,3 +474,18 @@ html, body {
 .search > div > input:valid {
   width: 250px;
 }
+
+.jumbotron {
+background-image: url("jumbotron_bg.jpg");
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.jumbotron h1 {
+
+color: #FFFFFF;
+font-size: 48px;
+
+font-family: 'Shift', sans-serif;
+font-weight: bold;
