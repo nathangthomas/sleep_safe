@@ -8,13 +8,7 @@ namespace :import do
 
     #Do not use above zipcodes in rake task!!! This will result in duplicate shelters in your database and over 1,000 API calls. Yikes!
     denver_zipcodes = [80202]
-
-    denver_zipcodes.each do |zip|
-      service = GoogleMapsService.new(zip, 16093.4)
-      service.shelters_by_zip_code.map do |shelter_data|
-        creator = ShelterCreator.new
-        creator.create_record(shelter_data)
-      end
-    end
+    creator = ShelterCreator.new
+    creator.populate_shelters(denver_zipcodes)
   end
 end
