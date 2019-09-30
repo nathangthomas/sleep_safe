@@ -79,7 +79,21 @@ p {
   text-align: center;
   margin-top: 1px;
   margin-bottom: 1px;
+  margin-left: auto;
+  margin-right; auto;
   /* background-color: red; */
+}
+
+.intro-box {
+  margin-left: auto;
+  margin-right: auto;
+  /* display: inline-block; */
+  position: relative;
+  /* text-align: center; */
+  width: 40%;
+  /* padding-left: 200px;
+  padding-right:200px; */
+
 }
 
 .search_bar {
@@ -149,15 +163,6 @@ display: inline-block;
   padding-right: 2rem;
 }
 
-.intro {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  width: 75%;
-  padding-left: 200px;
-  padding-right:200px;
-
-}
 
 
 .block{
@@ -186,7 +191,8 @@ display: inline-block;
 } */
 
 /* @media (min-width: 1200px) {
-  .intro .intro-text {
+  .intro
+   {
     width: 45%;
   }
 } */
