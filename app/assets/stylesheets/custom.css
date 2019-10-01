@@ -132,7 +132,7 @@ display: inline-block;
   color: #e6a756;
 }
 
-#mainNav .navbar-nav .nav-item 
+#mainNav .navbar-nav .nav-item
  {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
@@ -170,33 +170,6 @@ display: inline-block;
   display: inline-block
 }
 
-/* @media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    /* float: right; */ */
-  /* } */
-  /* .intro { */
-    /* left: 0; */
-    /* width: 60%; */
-    /* margin-top: 3rem; */
-    /* position: relative;
-    text-align: center;
-  } */
-  /* .intro .intro-text .intro-button {
-    width: 100%; */
-    /* left: 0; */
-    /* position: absolute;
-    bottom: -2rem;
-    margin: auto;
-  }
-} */
-
-/* @media (min-width: 1200px) {
-  .intro
-   {
-    width: 45%;
-  }
-} */
 
 .cta {
   padding-top: 5rem;
