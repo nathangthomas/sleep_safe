@@ -1,31 +1,9 @@
-/* body
-.jumbotron {
-background-image: url("jumbotron_bg.jpg");
-
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-/* .jumbotron h1 {
-
-color: #FFFFFF;
-font-size: 48px;
-
-font-family: 'Shift', sans-serif;
-font-weight: bold; */
-
-
-/*!
- * Start Bootstrap - Business Casual v5.0.8 (https://startbootstrap.com/template-overviews/business-casual)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
- */
-
 body {
   font-family: 'Lora';
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/videoblocks-sparkly-light-particles-flickering-on-dark-purple-background-imitating-a-night-sky-full-of-stars_rjoc4ibte_thumbnail-full01.png");
+/*
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.10))), url("https://websitevision.co.uk/uploads/Clients/Projects/Milky%20Way/milky_way_header_2.jpg");
 
-  /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.10))), url("https://websitevision.co.uk/uploads/Clients/Projects/Milky%20Way/milky_way_header_2.jpg"); */
   /* background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg"); */
   background-attachment: fixed;
   background-position: center;
@@ -80,21 +58,16 @@ p {
   margin-top: 1px;
   margin-bottom: 1px;
   margin-left: auto;
-  margin-right; auto;
+  margin-right: auto;
   /* background-color: red; */
 }
 
-.intro-box {
+.intro-box{
   margin-left: auto;
   margin-right: auto;
-  /* display: inline-block; */
   position: relative;
-  /* text-align: center; */
   width: 40%;
-  padding-top: 20px; 
-  /* padding-left: 200px;
-  padding-right:200px; */
-
+  padding-top: 20px;
 }
 
 .search_bar {
@@ -109,7 +82,6 @@ display: inline-block;
   display: block;
   font-size: 1.5rem;
   font-weight: 800;
-
 }
 
 .section-heading .section-heading-lower {
@@ -124,7 +96,6 @@ display: inline-block;
 
 #mainNav {
   background-color: rgba(47, 23, 15, 0.9);
-
   font-family: 'Raleway';
 }
 
@@ -136,7 +107,6 @@ display: inline-block;
  {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
-
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -167,36 +137,8 @@ display: inline-block;
 
 
 .block{
-  display: inline-block
+  display: inline-block;
 }
-
-/* @media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    /* float: right; */ */
-  /* } */
-  /* .intro { */
-    /* left: 0; */
-    /* width: 60%; */
-    /* margin-top: 3rem; */
-    /* position: relative;
-    text-align: center;
-  } */
-  /* .intro .intro-text .intro-button {
-    width: 100%; */
-    /* left: 0; */
-    /* position: absolute;
-    bottom: -2rem;
-    margin: auto;
-  }
-} */
-
-/* @media (min-width: 1200px) {
-  .intro
-   {
-    width: 45%;
-  }
-} */
 
 .cta {
   padding-top: 5rem;
@@ -314,10 +256,6 @@ display: inline-block;
 .footer {
  margin-top: -80px;
 }
-/*
-.intro-text{
-  margin-left: 450px;
-} */
 
 .shelters{
   text-align: center;
@@ -329,11 +267,6 @@ display: inline-block;
   color: white;
  }
 
-
- /* .site-heading-lower-lower{
-   padding-top: 10px;
- } */
-
 .index_title{
   color: sandybrown;
   text-align: center;
@@ -342,7 +275,6 @@ display: inline-block;
 .shelter_show{
   text-align: center;
   color: white;
-  /* background-color: red; */
   padding-bottom: 1px;
   margin-bottom: 1px;
 }
@@ -355,10 +287,6 @@ display: inline-block;
   color: white;
 }
 
-/* .sign-in-container{
-  margin-top: 20px;
-} */
-
 .form-label{
   color: sandybrown;
 }
@@ -367,21 +295,8 @@ display: inline-block;
   text-align: center;
 }
 
-
 .collapse_2{
   text-align: center;
-}
-
-.navbar{
-
-}
-
-/* .navbar-collapse {
-  text-align: right;
-} */
-
-.navbar-nav {
-
 }
 
 
@@ -389,25 +304,12 @@ display: inline-block;
   margin-left: 2px;
   background-color: black;
 }
-/*
-#bs-example-navbar-collapse-1{
-  margin-right: 300px;
-} */
 
 #navbarResponsive{
   display: inline-block;
   margin-left: 2px;
   margin-right: 10px;
-
 }
-
-/* @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700"); */
-
- /* {
-  font-family: Roboto, sans-serif;
-  padding: 0;
-  margin: 0;
-} */
 
 html, body {
   width: 100%;
@@ -419,8 +321,6 @@ html, body {
   width: 25%;
   height: 100%;
   display: flex;
-  /* justify-content: right;
-  align-items: center; */
 }
 
 .search {
@@ -520,9 +420,10 @@ body {
 }
 
 .flip-card {
+  display: inline-block;
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 425px;
+  height: 425px;
   perspective: 1000px;
   padding: 15px;
 }
@@ -542,6 +443,10 @@ body {
 }
 
 .flip-card-front, .flip-card-back {
+  border-radius: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -549,7 +454,6 @@ body {
 }
 
 .flip-card-front {
-  /* background-color: #bbb; */
   color: black;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("http://www.warwidowsstories.org.uk/wp-content/uploads/2016/10/creative-wood-textures-crumpled-paper-texture-free.jpg");
 }
@@ -559,4 +463,8 @@ body {
   background :-webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.25))), url("http://www.warwidowsstories.org.uk/wp-content/uploads/2016/10/creative-wood-textures-crumpled-paper-texture-free.jpg");
   color: black;
   transform: rotateY(180deg);
+}
+
+.cards{
+  text-align: center;
 }
