@@ -1,40 +1,96 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class='events'>Events</h1>
+<h1 class='events'><strong>Free Events</strong></h1>
 
 <!-- <table class = 'table table-hover'>
   <thead>
     <tr>
-      <td style="color:white">Event Name</td>
-      <td style="color:white">Event Date </td>
+      <td style="color:whiblackvent Name</td>
+      <td style="color:whitblackent Date </td>
     </tr>
   </thead>
 
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td style="color:white"><%= link_to "#{event.name}", event_path(event) %></td>
-        <td style="color:white"><%= event.date %></td>
+        <td style="colorblacke"><%= link_to "#{event.name}", event_path(event) %></td>
+        <td stylblacklor:white"><%= event.date %></td>
 
       </tr>
     <% end %>
   </tbody>
 </table> -->
 <!-- <br> -->
+<section class="cards">
+  <section class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h1>Project Homeless Connect Job Fair</h1> <br>
+        <h3>Thu, October 10, 2019
+        <br> 9:00 AM – 3:00 PM</h3>
+        <% @events.each do |event| %>
+          <h1><%= link_to "#{event.name}", event_path(event) %></h1>
+          <p><% event.date %></p>
+        <% end %>
+      </div>
+      <div class="flip-card-back">
+        <h3>Event Details</h3>
+        <p style="cblackwhite">Project Homeless Connect is a one day event that provides individuals and families experiencing homelessness or at-risk of becoming homelessness with access to vital services such as housing information, basic health care, food stamps, clothing, JOB TRAINING, EMPLOYMENT, and much more.
+<br>
+We hope to see you there!
+<br><br>Location: <br>
+Colorado Convention Center <br>
+700 14th Street <br>
+Denver, CO 80202
+</p>
+      </div>
+    </div>
+  </section>
+  <section class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2>Community Dinner: A Homelessness Awareness Week Event</h2> <br>
+        <h3>Fri, December 6, 2019 <br>
+6:00 PM – 8:30 PM</h3>
+        <% @events.each do |event| %>
+          <h1><%= link_to "#{event.name}", event_path(event) %></h1>
+          <p><%= event.date %></p>
+        <% end %>
+      </div>
+      <div class="flip-card-back">
+        <h3>Event Details</h3>
+        <p style="color:black">The Murphy Center Community Dinner brings people from the community together - both those housed and those unhoused - to share a meal, foster positive connections between people who may not normally have the opportunity to spend time together.
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <h1>Event Name</h1> <br>
-      <h3>Event Date</h3>
-      <% @events.each do |event| %>
-        <h1><%= link_to "#{event.name}", event_path(event) %></h1>
-        <p><%= event.date %></p>
-      <% end %>
+This is a casual event and includes non-alcoholic drinks, dinner, dessert, music and a short presentation.
+<br><br>
+
+Location: <br>
+First Presbyterian Church <br>
+531 South College Avenue <br>
+Fort Collins, CO 80524
+
+
+</p>
+      </div>
     </div>
-    <div class="flip-card-back">
-      <h1>Event Details</h1>
-      <p style="color:white">Replace this with event details. There are so many details to share about this awesome event. Bring all of your friends. This event is going to be so much fun please join us! </p>
+  </section>
+  <section class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h1>Picnic In The Park</h1> <br>
+        <h3> Sunday Oct. 13, 2019</h3>
+        <% @events.each do |event| %>
+          <h1><%= link_to "#{event.name}", event_path(event) %></h1>
+          <p><%= event.date %></p>
+        <% end %>
+      </div>
+      <div class="flip-card-back">
+        <h3>Event Details</h3>
+        <p style="color:black"> Join us on Sunday Oct. 13th for an afternoon picnic in the park! Food and non-alcoholic beverage will be provided.<br><br>
+          Location: <br>
+          8801 Martin Luther King Blvd <br> Denver, CO 80238
+          <br><br>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+</section>
