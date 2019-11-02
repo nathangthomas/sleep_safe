@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'devise-authy'
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # gem 'libxml-ruby'
 # Use Authy for sending token
